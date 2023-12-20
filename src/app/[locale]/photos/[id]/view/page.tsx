@@ -1,5 +1,5 @@
-import Frame from '../../../components/frame/Frame'
-import swagPhotos, { Photo } from '../../../photos'
+import Frame from '../../../../../components/frame/Frame'
+import swagPhotos, { Photo } from '../../../../../photos'
 
 export default function PhotoPage({ params: { id } }: { params: { id: string } }) {
   const photo: Photo = swagPhotos.find((p) => p.id === id)!

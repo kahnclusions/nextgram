@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import swagPhotos from '../photos'
+import swagPhotos from '../../photos'
 import Image from 'next/image'
 
-export default function Home() {
+export default function Home({ params }: { params: { locale: string } }) {
   const photos = swagPhotos
 
   return (
@@ -10,7 +10,7 @@ export default function Home() {
       <h1 className="text-center text-4xl font-bold m-10">NextGram</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 auto-rows-max	 gap-6 m-10">
         {photos.map(({ id, imageSrc }) => (
-          <Link key={id} href={`/photos/${id}`}>
+          <Link key={id} href={`/${params.locale}/photos/${id}/view`}>
             <Image
               alt=""
               src={imageSrc}

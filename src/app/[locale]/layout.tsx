@@ -1,5 +1,5 @@
-import './global.css'
-import GithubCorner from '../components/github-corner/GithubCorner'
+import '../global.css'
+import GithubCorner from '../../components/github-corner/GithubCorner'
 
 export const metadata = {
   title: 'NextGram',
